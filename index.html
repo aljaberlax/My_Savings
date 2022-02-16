@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css added -->
+    <link rel="stylesheet" href="custom.css">
+    <!-- bootstrap add  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>save money</title>
 </head>
@@ -15,7 +17,50 @@
         <h1 class="text-info text-center">MY SAVINGES</h1>
     </header>
     <main>
+        <section>
+            <div class="container">
+                <div class="row mt-3 g-3">
+                    <div class="col">
+                        <img src="images/money.jpg" alt="" height="575px" width="600px">
+                    </div>
+                    <div class="col">
+                        <h2 class="text-center">Income</h2>
+                        <br> Income: <input type="text">
+                        <br>
+                        <h2 class="text-center mt-3">Expenses</h2>
+                        <div class="row mb-3">
+                            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Food</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Rent</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Cloths</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                            </div>
+                        </div>
+                        <div class="text-center"> <button class="bg-primary text-white">Calculate</button>
+                        </div>
+                        <p class="text-center mt-3">Total Expenses:<span>00</span></p>
+                        <p class="text-center my-3">Balance:<span>00</span></p>
+                        <div class="text-center">
+                            save: <input type="text"> % <button class="bg-primary text-white mt-2">save</button>
+                        </div>
+                        <br>
+                        <h5 class="text-center">Saving Amount:<span>00</span></h5>
+                        <h5 class="text-center mt-1">Remaining Balance:<span>00</span></h5>
 
+                    </div>
+                </div>
+
+        </section>
     </main>
     <!-- js add  -->
     <script src="apps.js"></script>
