@@ -38,19 +38,24 @@ function ClearFields() {
 document.getElementById('calculate-btn').addEventListener('click', function() {
 
     let expenseTotal = calculateTotal();
-    let expense = document.getElementById('total-expense');
-    let previousExpenseText = expense.innerText
-    let previousExpense = parseFloat(previousExpenseText);
-    let totalExpense = previousExpense + expenseTotal;
-    expense.innerText = totalExpense;
     let incomeInput = getInputValue('income');
-    let totalBalance = incomeInput - totalExpense;
-    let balanceInput = document.getElementById('balance-total');
-    let balancetotal = parseFloat(balanceInput.innerText);
+    if (expenseTotal > incomeInput) {
+        window.alert('income should bigger')
+        ClearFields();
+    } else {
+        let expense = document.getElementById('total-expense');
+        let previousExpenseText = expense.innerText
+        let previousExpense = parseFloat(previousExpenseText);
+        let totalExpense = previousExpense + expenseTotal;
+        expense.innerText = totalExpense;
+        let incomeInput = getInputValue('income');
+        let totalBalance = incomeInput - totalExpense;
+        let balanceInput = document.getElementById('balance-total');
+        let balancetotal = parseFloat(balanceInput.innerText);
 
-    let newBalance = totalBalance + balancetotal;
-    balanceInput.innerText = newBalance;
-
+        let newBalance = totalBalance + balancetotal;
+        balanceInput.innerText = newBalance;
+    }
 })
 
 document.getElementById('save-btn').addEventListener('click', function() {
