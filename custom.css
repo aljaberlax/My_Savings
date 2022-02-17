@@ -6,3 +6,14 @@
 #income {
     background-color: darkslategrey;
 }
+
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 476px) {
+    #income {
+        width: 600px;
+        align-content: center;
+        align-items: center;
+    }
+}

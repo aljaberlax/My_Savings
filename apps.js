@@ -40,7 +40,7 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     let expenseTotal = calculateTotal();
     let incomeInput = getInputValue('income');
     if (expenseTotal > incomeInput) {
-        window.alert('income should bigger')
+        window.alert('income should bigger than expense')
         ClearFields();
     } else {
         let expense = document.getElementById('total-expense');
