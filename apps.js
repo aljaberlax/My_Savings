@@ -12,13 +12,6 @@ function calculateTotal() {
     let clothsInput = getInputValue('cloth');
     let expenseTotal = foodInput + rentInput + clothsInput;
     return expenseTotal;
-    //    console.log(subTotal);
-    // let tax = subTotal / 10;
-    // let totalPrice = subTotal + tax;
-    // document.getElementById('sub-total').innerText = subTotal;
-    // document.getElementById('tax-amount').innerText = tax;
-    // document.getElementById('totalPrice').innerText = totalPrice;
-
 }
 
 function save() {
@@ -40,7 +33,10 @@ function ClearFields() {
     document.getElementById("saving-amount").innerText = "00";
     document.getElementById("remaining-balance").innerText = "00";
 }
+
+
 document.getElementById('calculate-btn').addEventListener('click', function() {
+
     let expenseTotal = calculateTotal();
     let expense = document.getElementById('total-expense');
     let previousExpenseText = expense.innerText
@@ -51,9 +47,9 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     let totalBalance = incomeInput - totalExpense;
     let balanceInput = document.getElementById('balance-total');
     let balancetotal = parseFloat(balanceInput.innerText);
+
     let newBalance = totalBalance + balancetotal;
     balanceInput.innerText = newBalance;
-
 
 })
 
@@ -62,11 +58,11 @@ document.getElementById('save-btn').addEventListener('click', function() {
     let saveInput = getInputValue('save');
 
     let incomeInput = getInputValue('income');
-    let totalBalance = (saveInput / 100) * incomeInput;
+    let totalBalance = Math.round((saveInput / 100) * incomeInput);
     let savingAmount = document.getElementById('saving-amount');
     let nweSavingAmount = savingAmount.innerText
     let savesAmount = parseFloat(nweSavingAmount);
-    let newSaveBalance = totalBalance + savesAmount;
+    let newSaveBalance = Math.round(totalBalance + savesAmount);
     savingAmount.innerText = newSaveBalance;
     let remainBalance = document.getElementById('remaining-balance');
     let remainTotalBalance = parseFloat(remainBalance.innerText);
